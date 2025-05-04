@@ -1,0 +1,34 @@
+﻿@model List<Category>
+
+
+@ViewBag.Mesaj
+
+<h1>Kategori Listesi...Yeni Kategori eklemek icin <a asp-controller="Category" asp-action="CreateCategory">tıklayınız</a></h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Isim</td>
+            <td>Acıklama</td>
+            <td>Guncelle</td>
+            <td>Sil</td>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach(Category item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Description</td>
+                <td> <a asp-controller="Category" asp-route-id="@item.Id" asp-action="UpdateCategory" class="btn btn-warning">Guncelle</a>   </td>
+                <td> <a asp-controller="Category" asp-route-id="@item.Id" asp-action="DeleteCategory" class="btn btn-danger">Sil</a>  </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>

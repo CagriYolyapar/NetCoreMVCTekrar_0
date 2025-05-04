@@ -12,7 +12,7 @@ using NetCoreMVCTekrar_0.Models.ContextClasses;
 namespace NetCoreMVCTekrar_0.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20250503111058_Mig1")]
+    [Migration("20250504080114_Mig1")]
     partial class Mig1
     {
         /// <inheritdoc />

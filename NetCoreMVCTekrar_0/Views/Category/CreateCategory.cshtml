@@ -1,0 +1,22 @@
+﻿@model Category
+
+
+<form asp-controller="Category" asp-action="CreateCategory" method="post">
+  
+    <div>
+        <input asp-for="CategoryName" placeholder="Kategori ismi giriniz" />
+
+     </div>
+    <div>
+        <input asp-for="Description" placeholder="Aciklama giriniz"/>
+    </div>
+
+    <div>
+        <button>Kategori Ekle</button>
+    </div>
+
+</form>
+
+
+
+
